@@ -44,7 +44,7 @@ body {
     --card-foreground: 108 8.196721311475414% 11.96078431372549%;
     --popover: 120 20% 99.01960784313727%;
     --popover-foreground: 108 8.196721311475414% 11.96078431372549%;
-    --primary: 240 55.35714285714286% 56.07843137254902%;
+    --primary: 248 100% 68%;
     --primary-foreground: 0 0% 100%;
     --secondary: 120 16.666666666666625% 97.6470588235294%;
     --secondary-foreground: 110.00000000000003 3.0612244897959147% 38.431372549019606%;
@@ -58,6 +58,14 @@ body {
     --input: 120 3.8961038961038836% 84.90196078431373%;
     --ring: 120 3.8961038961038836% 84.90196078431373%;
     --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
 }
   .dark {
     --base-1: 90 5.88235294117647% 6.666666666666667%;
@@ -104,6 +112,14 @@ body {
     --input: 90 3.571428571428571% 21.96078431372549%;
     --ring: 90 3.571428571428571% 21.96078431372549%;
     --radius: 0.5rem;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
