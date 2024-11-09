@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${fontsans.className} antialiased bg-primary-50`}
+        className={`${fontsans.className} antialiased bg-[#F8F9FA]`}
       >
         <div className="h-full w-full">
         <aside className="fixed hidden md:block bg-white h-screen w-full max-w-[256px] z-30">
@@ -32,7 +32,7 @@ export default function RootLayout({
         </aside>
 
         <main className="flex-1 h-full py-[30px] md:py-7 md:mt-0 md:ml-[256px]">
-          <section className="w-full flex flex-col gap-4 md:gap-7 px-4 md:px-7 h-full mx-auto max-w-7xl">
+          <section className="w-full flex flex-col gap-4 md:gap-7 h-full mx-auto max-w-7xl">
             <div className="hidden md:block">
              <TopBar/>
             </div>
