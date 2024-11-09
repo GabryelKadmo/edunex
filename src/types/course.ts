@@ -1,6 +1,6 @@
-import { Category } from "./Category";
+import { Category } from "./category";
 
-export interface Curso {
+export interface Course {
   id: number;
   title: string;
   description: string;
