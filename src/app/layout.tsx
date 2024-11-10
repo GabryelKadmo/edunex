@@ -24,21 +24,21 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${fontsans.className} antialiased bg-primary-50`}
+        className={`${fontsans.className} antialiased bg-[#F8F9FA]`}
       >
         <div className="h-full w-full">
         <aside className="fixed hidden md:block bg-white h-screen w-full max-w-[256px] z-30">
           <Sidebar />
         </aside>
 
-        <main className="flex-1 h-full py-[30px] md:py-7 md:mt-0 md:ml-[256px]">
-          <section className="w-full flex flex-col gap-4 md:gap-7 px-4 md:px-7 h-full mx-auto max-w-7xl">
-            <div className="hidden md:block">
+        <main className="flex-1 h-full py-[30px] md:py-0 md:mt-0 md:ml-[256px] lg:py-0 lg:pt-6">
+          <section className="w-full flex flex-col gap-4 md:gap-7 lg:gap-4 h-full mx-auto max-w-7xl">
+            <div className="hidden lg:block px-8">
              <TopBar/>
             </div>
             {children}
           </section>
-          <footer className="mt-16">
+          <footer className="my-16 md:my-0 md:mt-10">
           <Footer />
         </footer>
         </main>

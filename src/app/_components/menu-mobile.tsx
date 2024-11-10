@@ -31,9 +31,9 @@ const navItems: NavItemType[] = [
     active: true,
   },
   {
-    text: "Dicas",
+    text: "Materiais",
     icon: DicasIcon,
-    href: "/dicas",
+    href: "/materiais",
     active: true,
   },
   {
@@ -49,7 +49,7 @@ export const MenuMobile = () => {
 
   return (
     <div className="px-5 py-3 bg-white w-full">
-      <ul className="flex justify-between items-center relative">
+      <ul className="flex items-center justify-between">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
           return (
@@ -63,7 +63,7 @@ export const MenuMobile = () => {
               )}
               <Link
                 href={item.href}
-                className={`flex items-center gap-3 px-6 py-4 relative z-10 ${isActive ? " text-primary" : "text-neutral-600"} `}
+                className={`flex items-center gap-3 py-4 relative z-10 ${isActive ? " text-primary px-5 sm:px-8" : "px-1 text-neutral-600"} `}
               >
                 {isActive && (
                   <item.icon
