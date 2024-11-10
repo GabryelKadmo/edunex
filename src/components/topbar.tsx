@@ -7,7 +7,7 @@ import { SearchIcon } from "lucide-react";
 const pageTitles: { [key: string]: string } = {
   "/": "Início",
   "/explore": "Explore",
-  "/dicas": "Dicas",
+  "/materiais": "Materiais",
   "/gerador-de-curriculo": "Gerador de Currículo",
   "/cursos": "Cursos",
 };
