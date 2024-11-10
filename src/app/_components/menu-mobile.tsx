@@ -31,9 +31,9 @@ const navItems: NavItemType[] = [
     active: true,
   },
   {
-    text: "Dicas",
+    text: "Materiais",
     icon: DicasIcon,
-    href: "/dicas",
+    href: "/materiais",
     active: true,
   },
   {

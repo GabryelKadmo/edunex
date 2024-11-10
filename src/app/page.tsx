@@ -81,7 +81,7 @@ export default function Home() {
       </section>
       <section className="mt-11 px-5 md:px-8 ">
         <div className="flex items-center justify-between mb-7">
-          <h2 className="font-semibold text-xl text-gray-800">Dicas</h2>
+          <h2 className="font-semibold text-xl text-gray-800">Materiais</h2>
           <Link className="font-semibold text-primary" href={"/dicas"}>
             Ver todas
           </Link>
