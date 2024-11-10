@@ -6,6 +6,7 @@ import Members from "@/components/members";
 import { SearchInput } from "@/components/search-input";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { courses } from "@/data/courses";
+import materials from "@/data/materials";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -72,7 +73,7 @@ export default function Home() {
           <ScrollArea className="w-full whitespace-nowrap">
             <div className="flex md:grid md:grid-cols-2 w-full gap-6 py-4 lg:grid-cols-3">
               {courses.map((course) => (
-                <CardCourse key={course.id} />
+                <CardCourse key={course.id} data={course}/>
               ))}
             </div>
             <ScrollBar orientation="horizontal" />
@@ -88,8 +89,8 @@ export default function Home() {
         </div>
         <div>
           <div className="w-full grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {courses.map((course) => (
-              <CardHorizontal key={course.id} />
+            {materials.slice(0, 4).map((material) => (
+              <CardHorizontal key={material.id} data={material} />
             ))}
           </div>
         </div>
