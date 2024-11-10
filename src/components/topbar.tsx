@@ -24,10 +24,10 @@ export const TopBar = () => {
       <h1 className="text-2xl font-bold text-primary-950">{title}</h1>
       <div
         tabIndex={0}
-        className="bg-primary-50 rounded-full flex items-center justify-between px-4 ring-2 ring-transparent focus-within:ring-2 focus-within:ring-primary transition-all duration-300"
+        className="bg-primary-50 w-72 rounded-full flex items-center justify-between px-4 ring-2 ring-transparent focus-within:ring-2 focus-within:ring-primary transition-all duration-300"
       >
         <SearchIcon size={18} className="text-primary" />
-        <Input className="text-zinc-600 bg-transparent border-none ring-0 ring-transparent ring-offset-transparent focus-visible:ring-transparent" />
+        <Input placeholder="O que você procura..." className="placeholder:text-neutral-400 text-zinc-600 bg-transparent border-none ring-0 ring-transparent ring-offset-transparent focus-visible:ring-transparent" />
       </div>
     </div>
   );

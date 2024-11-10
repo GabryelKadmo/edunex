@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Members = () => {
   return ( 
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-5">
       {members.map((member) => (
         <div key={member.id} className="flex flex-col items-center">
-          <div className="w-full h-[108px] gap-5 overflow-hidden relative rounded-2xl mb-2">
+          <div className="w-full h-[108px] sm:h-[130px] gap-5 overflow-hidden relative rounded-2xl mb-2">
           <Image alt="sa" src={"/image-perfil.jpg"} fill objectFit="cover"/>
           </div>
 
