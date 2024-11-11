@@ -1,17 +1,15 @@
 import { ListAreas } from "@/components/list-areas";
 import { SearchInput } from "@/components/search-input";
 import { TitleBar } from "@/components/title-bar";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
 
 export default function ExplorePage() {
   return ( 
     <>
-      <div className="px-5 lg:hidden">
+      <div className="px-6 lg:hidden">
       <TitleBar title="Explore" />
       </div>
 
-      <section className="px-5 py-6 lg:px-8">
+      <section className="px-6 py-6 lg:px-8">
         <div>
           <SearchInput />
         </div>

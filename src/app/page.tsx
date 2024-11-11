@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <header className="">
-        <div className="md:hidden px-5 md:px-8 flex justify-between items-center">
+        <div className="md:hidden px-6 md:px-8 flex justify-between items-center">
           <Image
             alt="Logo Edunex"
             src={"/logoicon.svg"}
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-5 md:px-8 py-8 md:py-0">
+      <section className="px-6 md:px-8 py-8 md:py-0">
         <div className="flex flex-col gap-8 text-neutral-700 font-semibold text-2xl lg:hidden">
           <h1>
             Encontre um curso e <br /> explore
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="px-5 md:px-8 flex items-center justify-between mb-2 lg:py-8">
+        <div className="px-6 md:px-8 flex items-center justify-between mb-2 lg:py-8">
           <h2 className="font-semibold text-xl text-gray-800">
             Cursos Populares
           </h2>
@@ -69,7 +69,7 @@ export default function Home() {
             Ver todos
           </Link>
         </div>
-        <div className="pl-5 md:px-8">
+        <div className="pl-6 md:px-8">
           <ScrollArea className="w-full whitespace-nowrap">
             <div className="flex lg:grid w-full gap-6 py-4 lg:grid-cols-3">
               {courses.map((course) => (
@@ -80,7 +80,7 @@ export default function Home() {
           </ScrollArea>
         </div>
       </section>
-      <section className="mt-11 px-5 md:px-8 ">
+      <section className="mt-11 px-6 md:px-8 ">
         <div className="flex items-center justify-between mb-7">
           <h2 className="font-semibold text-xl text-gray-800">Materiais</h2>
           <Link className="font-semibold text-primary" href={"/dicas"}>
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 md:px-8 py-11 lg:py-4">
+      <section className="px-6 md:px-8 py-11 lg:py-4">
         <div
           className="relative h-[580px] sm:h-[380px] bg-cover bg-center rounded-2xl"
           style={{ backgroundImage: "url('/bg-about.png')" }}
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 md:px-8">
+      <section className="px-6 md:px-8">
         <div
           className="relative h-[150px] sm:h-[200px] lg:h-[230px] bg-cover bg-center rounded-2xl flex items-center justify-center"
           style={{ backgroundImage: "url('/bg-our-team.png')" }}

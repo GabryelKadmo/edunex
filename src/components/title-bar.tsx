@@ -3,11 +3,9 @@
 import { ChevronLeft, ShareIcon } from "lucide-react";
 import {
   FacebookShareButton,
-  TwitterShareButton,
   LinkedinShareButton,
   WhatsappShareButton,
   FacebookIcon,
-  TwitterIcon,
   LinkedinIcon,
   WhatsappIcon,
 } from "react-share";
@@ -52,23 +50,20 @@ export const TitleBar = ({ title, data }: Props) => {
               <ShareIcon className="w-[100px] h-[100px]" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent>
+          <PopoverContent className="w-auto">
             <div className="flex gap-2">
               <FacebookShareButton url={shareUrl}>
-                <FacebookIcon size={24} round />
+                <FacebookIcon size={32} round />
               </FacebookShareButton>
-              <TwitterShareButton url={shareUrl} title={shareText}>
-                <TwitterIcon size={24} round />
-              </TwitterShareButton>
               <LinkedinShareButton
                 url={shareUrl}
                 title={shareText}
                 summary={shareText}
               >
-                <LinkedinIcon size={24} round />
+                <LinkedinIcon size={32} round />
               </LinkedinShareButton>
               <WhatsappShareButton url={shareUrl} title={shareText}>
-                <WhatsappIcon size={24} round />
+                <WhatsappIcon size={32} round />
               </WhatsappShareButton>
             </div>
           </PopoverContent>

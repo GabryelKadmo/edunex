@@ -6,10 +6,10 @@ import materials from "@/data/materials";
 export default function DicasPage() {
   return (
     <>
-      <div className="px-5 lg:px-8 lg:hidden">
+      <div className="px-6 lg:px-8 lg:hidden">
         <TitleBar title="Materiais" />
       </div>
-      <section className="px-5 lg:px-8">
+      <section className="px-6 lg:px-8">
         <div className="h-[700px] lg:h-[300px] grid grid-cols-1 lg:grid-cols-7 gap-4 mt-8">
           <div className="lg:col-span-4 lg:row-span-2">
             <CardEmphasis data={materials[0]} />

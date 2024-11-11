@@ -19,10 +19,10 @@ const PageSingleCourse = async ({
 
   return (
     <>
-      <div className="px-5 lg:px-8 lg:hidden">
+      <div className="px-6 lg:px-8 lg:hidden">
         <TitleBar title={curso.category.name} data={curso}/>
       </div>
-      <main className="px-5 lg:px-8 mt-8">
+      <main className="px-6 lg:px-8 mt-8">
         <div className="w-full h-[240px] rounded-2xl relative overflow-hidden">
           <Image
             src={curso.image}
@@ -34,8 +34,8 @@ const PageSingleCourse = async ({
         <h1 className="text-xl font-bold text-primary-900 mt-6">
           {curso.title}
         </h1>
-        <div className="mt-3 w-full flex items-center justify-between">
-          <Badge className="text-sm bg-primary-50 text-primary font-medium hover:bg-primary-50 hover:text-primary">
+        <div className="mt-3 w-full flex items-center gap-4">
+          <Badge className="text-base bg-primary-50 text-primary font-medium hover:bg-primary-50 hover:text-primary">
             {curso.category.name}
           </Badge>
           <div className="flex items-center gap-0.5">

@@ -6,10 +6,10 @@ import { courses } from "@/data/courses";
 const CursosPage = () => {
   return ( 
     <>
-      <div className="px-5 lg:px-8 lg:hidden">
+      <div className="px-6 lg:px-8 lg:hidden">
         <TitleBar title="Cursos" />
       </div>
-      <main className="mt-8 px-5 lg:px-8 flex flex-col gap-7">
+      <main className="mt-8 px-6 lg:px-8 flex flex-col gap-7">
         <div>
           <ListAreas />
         </div>
