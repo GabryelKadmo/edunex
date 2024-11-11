@@ -25,9 +25,9 @@ const navItems: NavItemType[] = [
     active: true,
   },
   {
-    text: "Explore",
+    text: "Cursos",
     icon: CursoIcon,
-    href: "/explore",
+    href: "/cursos",
     active: true,
   },
   {

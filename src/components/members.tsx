@@ -7,7 +7,7 @@ const Members = () => {
       {members.map((member) => (
         <div key={member.id} className="flex flex-col items-center">
           <div className="w-full h-[108px] sm:h-[130px] gap-5 overflow-hidden relative rounded-2xl mb-2">
-          <Image alt="sa" src={"/image-perfil.jpg"} fill objectFit="cover"/>
+          <Image alt="sa" src={"/image-perfil.jpg"} fill className="object-cover"/>
           </div>
 
           <span className="font-semibold text-xs text-neutral-700 text-center">{member.name}</span>

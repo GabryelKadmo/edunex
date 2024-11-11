@@ -9,8 +9,9 @@ export interface Course {
   hasCertificate: boolean;
   registrationDate: string;
   category: Category;
-  nivel: "Iniciante" | "Intermediário" | "Avançado";
+  level: "Iniciante" | "Intermediário" | "Avançado";
   duration: number;
   prerequisite: string;
   minimumAge: string;
+  link: string;
 }

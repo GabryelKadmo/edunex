@@ -2,13 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import HomeIcon from "@/components/icons/home-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import SearchIcon from "@/components/icons/search-icon";
 import DicasIcon from "@/components/icons/dicas-icon";
 import CurriculoIcon from "@/components/icons/curriculo-icon";
+import { Button } from "@/components/ui/button";
+import { courses } from "@/data/courses";
+import { createSlug } from "@/utils/format-string";
 
 type NavItemType = {
   text: string;
@@ -31,9 +34,9 @@ const navItems: NavItemType[] = [
     active: true,
   },
   {
-    text: "Materiais",
+    text: "Cursos",
     icon: DicasIcon,
-    href: "/materiais",
+    href: "/cursos",
     active: true,
   },
   {
@@ -46,6 +49,29 @@ const navItems: NavItemType[] = [
 
 export const MenuMobile = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.back();
+  };
+
+  if (pathname.startsWith("/cursos/")) {
+    const coursePath = pathname.split("/cursos/")[1];
+    const curso = courses.find((course) => createSlug(course.title) === coursePath);
+    
+    if (coursePath) {
+      return (
+        <div className="px-5 py-3 bg-white w-full flex justify-between items-center shadow">
+          <Button className="text-neutral-600 bg-primary-50 px-7 py-3.5 rounded-full hover:text-primary-50" onClick={handleBack}>
+            Voltar
+          </Button>
+          <Link href={curso?.link || "#"} className="bg-primary text-primary-50 px-10 py-3.5 rounded-full">
+            Ir para o Curso
+          </Link>
+        </div>
+      );
+    }
+  }
 
   return (
     <div className="px-5 py-3 bg-white w-full">
