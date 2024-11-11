@@ -28,7 +28,7 @@ export default function Home() {
       <section className="px-8 hidden lg:block">
         <div>
           <div className="h-[276px] w-full relative overflow-hidden rounded-2xl">
-            <Image alt="bg" src={"/bg-hero.svg"} fill objectFit="cover" />
+            <Image alt="bg" src={"/bg-hero.svg"} fill className="object-cover" />
             <div className="absolute left-[66px] top-[48px] flex flex-col items-center justify-center">
               <h1 className="text-center font-bold text-3xl text-primary-50 ">
                 Conectando você a oportunidades de <br />
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
         <div className="pl-5 md:px-8">
           <ScrollArea className="w-full whitespace-nowrap">
-            <div className="flex md:grid md:grid-cols-2 w-full gap-6 py-4 lg:grid-cols-3">
+            <div className="flex lg:grid w-full gap-6 py-4 lg:grid-cols-3">
               {courses.map((course) => (
                 <CardCourse key={course.id} data={course}/>
               ))}

@@ -13,4 +13,5 @@ export interface Course {
   duration: number;
   prerequisite: string;
   minimumAge: string;
+  link: string;
 }

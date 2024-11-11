@@ -1,4 +1,3 @@
-
 import { Course } from "@/types/course";
 import { categories } from "./categories";
 
@@ -15,7 +14,8 @@ export const courses: Course[] = [
     level: "Iniciante",
     duration: 40,
     prerequisite: "Nenhum",
-    minimumAge: "12+"
+    minimumAge: "12+",
+    link: "https://example.com/introducao-ao-desenvolvimento-web"
   },
   {
     id: 2,
@@ -29,7 +29,8 @@ export const courses: Course[] = [
     level: "Iniciante",
     duration: 50,
     prerequisite: "Conhecimento básico de programação",
-    minimumAge: "15+"
+    minimumAge: "15+",
+    link: "https://example.com/inteligencia-artificial-para-iniciantes"
   },
   {
     id: 3,
@@ -43,12 +44,13 @@ export const courses: Course[] = [
     level: "Intermediário",
     duration: 60,
     prerequisite: "Conhecimento básico de Python",
-    minimumAge: "16+"
+    minimumAge: "16+",
+    link: "https://example.com/ciencia-de-dados-com-python"
   },
   {
     id: 4,
     title: "Design Gráfico para Iniciantes",
-    description: "Explore os princípios do design gráfico e aprenda a usar ferramentas como Adobe Photoshop.",
+    description: "Objetivo apresentar a Gestão do Tempo, a partir de técnicas e métodos, como aliada da pessoa empreendedora que busca gerenciar seu tempo de forma eficaz, aumentando a eficiência e a produtividade pessoal e da empresa Sobre o cursoSaber como gerir o tempo de maneira eficaz é uma tarefa que não pode ser deixada para depois. Mesmo assim, muitos gestores negligenciam o poder que a gestão de tempo tem na produtividade do seu negócio. Neste curso você vai aprender que a otimização do tempo está diretamente ligada à qualidade das entregas e podem gerar eficiência no fluxo de trabalho, garantindo os melhores resultados para você, sua empresa e sua equipe.",
     image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800",
     owner: "Bob Brown",
     hasCertificate: true,
@@ -57,7 +59,8 @@ export const courses: Course[] = [
     level: "Iniciante",
     duration: 30,
     prerequisite: "Nenhum",
-    minimumAge: "14+"
+    minimumAge: "14+",
+    link: "https://example.com/design-grafico-para-iniciantes"
   },
   {
     id: 5,
@@ -71,6 +74,7 @@ export const courses: Course[] = [
     level: "Avançado",
     duration: 70,
     prerequisite: "Conhecimento básico de marketing digital",
-    minimumAge: "18+"
+    minimumAge: "18+",
+    link: "https://example.com/marketing-digital-avancado"
   }
 ];
