@@ -20,7 +20,7 @@ const PageSingleCourse = async ({
   return (
     <>
       <div className="px-5 lg:px-8 lg:hidden">
-        <TitleBar title={curso.category.name} />
+        <TitleBar title={curso.category.name} data={curso}/>
       </div>
       <main className="px-5 lg:px-8 mt-8">
         <div className="w-full h-[240px] rounded-2xl relative overflow-hidden">

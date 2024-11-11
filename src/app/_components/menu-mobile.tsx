@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import HomeIcon from "@/components/icons/home-icon";
 import { CustomIconType } from "@/types/custom-icon";
@@ -49,6 +49,12 @@ const navItems: NavItemType[] = [
 
 export const MenuMobile = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.back();
+  };
+
   if (pathname.startsWith("/cursos/")) {
     const coursePath = pathname.split("/cursos/")[1];
     const curso = courses.find((course) => createSlug(course.title) === coursePath);
@@ -56,7 +62,7 @@ export const MenuMobile = () => {
     if (coursePath) {
       return (
         <div className="px-5 py-3 bg-white w-full flex justify-between items-center shadow">
-          <Button className="text-neutral-600 bg-primary-50 px-7 py-3.5 rounded-full hover:text-primary-50" onClick={() => window.history.back()}>
+          <Button className="text-neutral-600 bg-primary-50 px-7 py-3.5 rounded-full hover:text-primary-50" onClick={handleBack}>
             Voltar
           </Button>
           <Link href={curso?.link || "#"} className="bg-primary text-primary-50 px-10 py-3.5 rounded-full">
