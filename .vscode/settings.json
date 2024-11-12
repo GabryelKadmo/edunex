@@ -1,0 +1,15 @@
+{
+    "terrys-save-states.saveStates": [
+        {
+            "name": "c:\\Projetos\\edunex\\src\\app\\gerador-de-curriculo\\page.tsx",
+            "saveStates": [
+                {
+                    "id": "b_S44SZfFq9kSZoPQa9h-3Y5jF3pYHUE",
+                    "content": "import { Button } from \"@/components/ui/button\";\r\nimport CurriculoImage from \"./assets/images/ModeloCurriculo.png\";\r\nimport Image from \"next/image\";\r\nimport { Separator } from \"@/components/ui/separator\"\r\n\r\nexport default function GeradorDeCurriculoPage() {\r\n  return (\r\n    <>\r\n      <div className=\"flex justify-between px-8 space-x-8\">\r\n        <div className=\"flex flex-col justify-center items-start max-w-lg\">\r\n          <h1 className=\"text-3xl font-bold text-gray-800 mb-4\">\r\n            Gerador de Currículo Profissional\r\n          </h1>\r\n          <p className=\"text-lg text-start  text-gray-600 mb-8\">\r\n            O Gerador de Currículos do Edunex foi projetado < br /> para  tornar a criação do seu currículo uma tarefa\r\n            < br /> simples, rápida e eficaz. Com ferramentas intuitivas,\r\n            < br /> você pode personalizar cada seção, destacando suas habilidades, experiências e conquistas.\r\n            < br /> Em poucos passos, tenha um currículo profissional e visualmente atraente, pronto para impressionar\r\n            < br />recrutadores e abrir portas no mercado de trabalho.\r\n          </p>\r\n          <Button className=\"px-6 w-full py-3 text-lg font-medium text-white bg-primary rounded-md hover:bg-primary-600\">\r\n            Criar Currículo Agora\r\n          </Button>\r\n        </div>\r\n\r\n        <div className=\"hidden md:block\">\r\n          <Image src={CurriculoImage} alt=\"Modelo Curriculo\" className=\" object-contain\" />\r\n        </div>\r\n      </div>\r\n      <Separator className=\"my-8 border-t border-primary-500\" />\r\n\r\n    </>\r\n  );\r\n}\r\n",
+                    "timestamp": 1731442556937,
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
