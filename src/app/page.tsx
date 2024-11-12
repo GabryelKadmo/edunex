@@ -1,9 +1,9 @@
-import { CardCourse } from "@/components/card-course";
+import { CardItem } from "@/components/card-item";
 import { CardHorizontal } from "@/components/card-horizontal";
 import MenuIcon from "@/components/icons/menu-icon";
 import { ListAreas } from "@/components/list-areas";
 import Members from "@/components/members";
-import { SearchInput } from "@/components/search-input";
+// import { SearchInput } from "@/components/search-input";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { courses } from "@/data/courses";
 import materials from "@/data/materials";
@@ -34,16 +34,16 @@ export default function Home() {
                 Conectando você a oportunidades de <br />
                 aprendizado e crescimento
               </h1>
-              <div className="flex gap-20 mt-6">
-                <div className="flex flex-col gap-2">
-                  <span className="text-primary-50 font-bold text-5xl">60</span>
+                <div className="flex gap-20 mt-6">
+                <div className="flex flex-col gap-2 items-center justify-center">
+                <span className="text-primary-50 font-bold text-5xl">{courses.length < 10 ? `0${courses.length}` : courses.length}</span>
                   <span className="text-xl text-primary-100 font-bold">Cursos</span>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <span className="text-primary-50 font-bold text-5xl">38</span>
+                <div className="flex flex-col gap-2 items-center justify-center">
+                  <span className="text-primary-50 font-bold text-5xl">{materials.length < 10 ? `0${materials.length}` : materials.length}</span>
                   <span className="text-xl text-primary-100 font-bold">Dicas</span>
                 </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Home() {
             Encontre um curso e <br /> explore
             <span className="text-primary">novas habilidades</span>
           </h1>
-          <SearchInput />
+          {/* <SearchInput /> */}
         </div>
         <div className="mt-7 lg:mt-4">
           <ListAreas />
@@ -73,7 +73,7 @@ export default function Home() {
           <ScrollArea className="w-full whitespace-nowrap">
             <div className="flex lg:grid w-full gap-6 py-4 lg:grid-cols-3">
               {courses.map((course) => (
-                <CardCourse key={course.id} data={course}/>
+                <CardItem key={course.id} data={course}/>
               ))}
             </div>
             <ScrollBar orientation="horizontal" />

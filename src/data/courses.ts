@@ -4,13 +4,13 @@ import { categories } from "./categories";
 export const courses: Course[] = [
   {
     id: 1,
-    title: "Introdução ao Desenvolvimento Web",
+    title: "Introdução a História Introdução a História",
     description: "Aprenda os fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript.",
     image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=800",
     owner: "John Doe",
     hasCertificate: true,
     registrationDate: "2023-01-15",
-    category: categories.find(category => category.name === 'Desenvolvimento Web')!,
+    category: categories.find(category => category.name === 'História')!,
     level: "Iniciante",
     duration: 40,
     prerequisite: "Nenhum",

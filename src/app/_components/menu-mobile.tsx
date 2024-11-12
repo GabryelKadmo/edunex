@@ -8,10 +8,10 @@ import HomeIcon from "@/components/icons/home-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import SearchIcon from "@/components/icons/search-icon";
 import DicasIcon from "@/components/icons/dicas-icon";
-import CurriculoIcon from "@/components/icons/curriculo-icon";
 import { Button } from "@/components/ui/button";
 import { courses } from "@/data/courses";
 import { createSlug } from "@/utils/format-string";
+import CursoIcon from "@/components/icons/curso-icon";
 
 type NavItemType = {
   text: string;
@@ -35,14 +35,14 @@ const navItems: NavItemType[] = [
   },
   {
     text: "Cursos",
-    icon: DicasIcon,
+    icon: CursoIcon,
     href: "/cursos",
     active: true,
   },
   {
-    text: "Currículo",
-    icon: CurriculoIcon,
-    href: "/gerador-de-curriculo",
+    text: "Materiais",
+    icon: DicasIcon,
+    href: "/materiais",
     active: true,
   },
 ];

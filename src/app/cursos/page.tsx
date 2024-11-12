@@ -1,4 +1,4 @@
-import { CardCourse } from "@/components/card-course";
+import { CardItem } from "@/components/card-item";
 import { ListAreas } from "@/components/list-areas";
 import { TitleBar } from "@/components/title-bar";
 import { courses } from "@/data/courses";
@@ -16,7 +16,7 @@ const CursosPage = () => {
         <section className="mt-5">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {courses.map(courses => (
-              <CardCourse key={courses.id} data={courses}/>
+              <CardItem key={courses.id} data={courses}/>
             ))}
           </div>
         </section>
