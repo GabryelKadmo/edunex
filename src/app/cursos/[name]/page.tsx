@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import ClockIcon from "@/components/icons/clock-icon";
 import FlagIcon from "@/components/icons/flag-icon";
 import { TitleBar } from "@/components/title-bar";
@@ -12,7 +13,6 @@ const PageSingleCourse = async ({
   params: Promise<{ name: string }>;
 }) => {
   const name = (await params).name;
-  
 
   const curso = courses.find((course) => createSlug(course.title) === name);
   if (!curso) return <h1>Curso não encontrado</h1>;
@@ -20,10 +20,10 @@ const PageSingleCourse = async ({
   return (
     <>
       <div className="px-6 lg:px-8 lg:hidden">
-        <TitleBar title={curso.category.name} data={curso}/>
+        <TitleBar title={curso.category.name} data={curso} />
       </div>
       <main className="px-6 lg:px-8 mt-8">
-        <div className="w-full h-[240px] rounded-2xl relative overflow-hidden">
+        <div className="w-full h-[340px] lg:h-[500px] rounded-2xl relative overflow-hidden">
           <Image
             src={curso.image}
             alt={curso.title}
@@ -31,10 +31,10 @@ const PageSingleCourse = async ({
             className="object-cover"
           />
         </div>
-        <h1 className="text-xl font-bold text-primary-900 mt-6">
+        <h1 className="text-2xl lg:text-3xl font-bold text-primary-900 mt-10">
           {curso.title}
         </h1>
-        <div className="mt-3 w-full flex items-center gap-4">
+        <div className="mt-7 w-full flex items-center gap-4">
           <Badge className="text-base bg-primary-50 text-primary font-medium hover:bg-primary-50 hover:text-primary">
             {curso.category.name}
           </Badge>
@@ -52,9 +52,14 @@ const PageSingleCourse = async ({
         </div>
 
         <div className="mt-6 border-t py-6">
-          <p className="text-sm text-neutral-700 leading-6">{curso.description}</p>
+          <p className="text-sm text-neutral-700 leading-6">
+            {curso.description}
+          </p>
         </div>
       </main>
+      <footer className="my-16 md:my-0 md:mt-10">
+        <Footer />
+      </footer>
     </>
   );
 };

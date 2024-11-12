@@ -6,6 +6,7 @@ import { Course } from "@/types/course";
 import Link from "next/link";
 import { createSlug } from "@/utils/format-string";
 import { Material } from "@/types/material";
+import CertificateIcon from "./icons/certificate-icon";
 
 type Props = {
   data: Course | Material;
@@ -20,8 +21,14 @@ export const CardItem = ({ data }: Props) => {
         className="w-full min-w-[320px] lg:min-w-full h-[390px] md:w-full p-4 bg-white rounded-2xl text-gray-700 border border-transparent whitespace-normal flex flex-col justify-between transition duration-300 hover:border-gray-200 hover:bg-primary-50"
       >
         <div>
-          <div className="w-full h-52 overflow-hidden relative rounded-2xl">
+          <div className="w-full h-[220px] overflow-hidden relative rounded-2xl">
             <Image alt="sa" src={data.image} fill className="object-cover" />
+            {data.hasCertificate && (
+            <Badge className="py-1.5 text-sm absolute font-medium gap-2 bottom-5 right-5 bg-primary">
+              <CertificateIcon />
+              Certificado
+            </Badge>
+            )}
           </div>
           <h3 className="font-semibold text-base mt-4 w-full line-clamp-2 overflow-hidden text-ellipsis">
             {data.title}
