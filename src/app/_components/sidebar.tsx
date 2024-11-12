@@ -9,6 +9,7 @@ import DicasIcon from "@/components/icons/dicas-icon";
 import CurriculoIcon from "@/components/icons/curriculo-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import Image from "next/image";
+import SearchIcon from "@/components/icons/search-icon";
 
 type NavItemType = {
   text: string;
@@ -34,6 +35,12 @@ const navItems: NavItemType[] = [
     text: "Materiais",
     icon: DicasIcon,
     href: "/materiais",
+    active: true,
+  },
+  {
+    text: "Explore",
+    icon: SearchIcon,
+    href: "/explore",
     active: true,
   },
   {
