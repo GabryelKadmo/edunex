@@ -3,12 +3,13 @@ import { CardHorizontal } from "@/components/card-horizontal";
 import MenuIcon from "@/components/icons/menu-icon";
 import { ListAreas } from "@/components/list-areas";
 import Members from "@/components/members";
-// import { SearchInput } from "@/components/search-input";
+import { SearchInputButton } from "@/components/search-input-button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { courses } from "@/data/courses";
 import materials from "@/data/materials";
 import Image from "next/image";
 import Link from "next/link";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -28,22 +29,39 @@ export default function Home() {
       <section className="px-8 hidden lg:block">
         <div>
           <div className="h-[276px] w-full relative overflow-hidden rounded-2xl">
-            <Image alt="bg" src={"/bg-hero.svg"} fill className="object-cover" />
+            <Image
+              alt="bg"
+              src={"/bg-hero.svg"}
+              fill
+              className="object-cover"
+            />
             <div className="absolute left-[66px] top-[48px] flex flex-col items-center justify-center">
               <h1 className="text-center font-bold text-3xl text-primary-50 ">
                 Conectando você a oportunidades de <br />
                 aprendizado e crescimento
               </h1>
-                <div className="flex gap-20 mt-6">
+              <div className="flex gap-20 mt-6">
                 <div className="flex flex-col gap-2 items-center justify-center">
-                <span className="text-primary-50 font-bold text-5xl">{courses.length < 10 ? `0${courses.length}` : courses.length}</span>
-                  <span className="text-xl text-primary-100 font-bold">Cursos</span>
+                  <span className="text-primary-50 font-bold text-5xl">
+                    {courses.length < 10
+                      ? `0${courses.length}`
+                      : courses.length}
+                  </span>
+                  <span className="text-xl text-primary-100 font-bold">
+                    Cursos
+                  </span>
                 </div>
                 <div className="flex flex-col gap-2 items-center justify-center">
-                  <span className="text-primary-50 font-bold text-5xl">{materials.length < 10 ? `0${materials.length}` : materials.length}</span>
-                  <span className="text-xl text-primary-100 font-bold">Dicas</span>
+                  <span className="text-primary-50 font-bold text-5xl">
+                    {materials.length < 10
+                      ? `0${materials.length}`
+                      : materials.length}
+                  </span>
+                  <span className="text-xl text-primary-100 font-bold">
+                    Dicas
+                  </span>
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -52,9 +70,9 @@ export default function Home() {
         <div className="flex flex-col gap-8 text-neutral-700 font-semibold text-2xl lg:hidden">
           <h1>
             Encontre um curso e <br /> explore
-            <span className="text-primary">novas habilidades</span>
+            <span className="text-primary"> novas habilidades</span>
           </h1>
-          {/* <SearchInput /> */}
+          <SearchInputButton />
         </div>
         <div className="mt-7 lg:mt-4">
           <ListAreas />
@@ -70,10 +88,10 @@ export default function Home() {
           </Link>
         </div>
         <div className="pl-6 md:px-8">
-          <ScrollArea className="w-full whitespace-nowrap">
-            <div className="flex lg:grid w-full gap-6 py-4 lg:grid-cols-3">
-              {courses.map((course) => (
-                <CardItem key={course.id} data={course}/>
+          <ScrollArea className="w-full lg:whitespace-nowrap">
+            <div className="flex lg:grid  w-full gap-6 py-4 lg:grid-cols-3">
+              {courses.slice(0, 6).map((course) => (
+                <CardItem key={course.id} data={course} />
               ))}
             </div>
             <ScrollBar orientation="horizontal" />
@@ -83,7 +101,7 @@ export default function Home() {
       <section className="mt-11 px-6 md:px-8 ">
         <div className="flex items-center justify-between mb-7">
           <h2 className="font-semibold text-xl text-gray-800">Materiais</h2>
-          <Link className="font-semibold text-primary" href={"/dicas"}>
+          <Link className="font-semibold text-primary" href={"/materiais"}>
             Ver todas
           </Link>
         </div>
@@ -96,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-8 py-11 lg:py-4">
+      <section className="px-6 md:px-8 py-11 lg:py-8">
         <div
           className="relative h-[580px] sm:h-[380px] bg-cover bg-center rounded-2xl"
           style={{ backgroundImage: "url('/bg-about.png')" }}
@@ -134,13 +152,23 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-primary-200 lg:text-3xl">
               Nossa Equipe
             </h2>
-            <Image alt="Polegar" src={"/coracao.png"} width={30} height={30} className="w-10 h-10"/>
+            <Image
+              alt="Polegar"
+              src={"/coracao.png"}
+              width={30}
+              height={30}
+              className="w-10 h-10"
+            />
           </div>
         </div>
         <div className="mt-12">
           <Members />
         </div>
       </section>
+
+      <footer className="my-16 md:my-0 md:mt-10">
+        <Footer />
+      </footer>
     </>
   );
 }

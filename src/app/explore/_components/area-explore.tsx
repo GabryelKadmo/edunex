@@ -1,4 +1,3 @@
-// components/area-explore.tsx
 "use client";
 
 import { ListAreas } from "@/components/list-areas";
@@ -9,8 +8,8 @@ import materials from "@/data/materials";
 import { CardItem } from "@/components/card-item";
 import { Button } from "@/components/ui/button";
 import SearchIcon from "@/components/icons/search-icon";
+import { Input } from "@/components/ui/input";
 
-// Função para remover acentos e caracteres especiais
 const removeDiacritics = (str: string): string => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
@@ -19,51 +18,45 @@ const AreaExplore = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Estado para controlar o valor do input
+
   const [inputValue, setInputValue] = useState<string>(
     searchParams.get("search") || ""
   );
 
-  // Estado para controlar a área selecionada
   const [selectedArea, setSelectedArea] = useState<string>(
     searchParams.get("area") || ""
   );
 
   useEffect(() => {
-    // Atualiza os estados quando os parâmetros de busca mudam na URL
     setInputValue(searchParams.get("search") || "");
     setSelectedArea(searchParams.get("area") || "");
   }, [searchParams]);
 
-  // Função chamada ao clicar no botão de pesquisa
   const handleSearch = () => {
+
     const areaParam = selectedArea
       ? `&area=${encodeURIComponent(selectedArea)}`
       : "";
     router.push(
       `/explore?search=${encodeURIComponent(inputValue)}${areaParam}`
     );
+    
   };
 
-  // Função chamada ao digitar no input (apenas atualiza o estado inputValue)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
-  // Função para lidar com a tecla Enter no input
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleSearch();
     }
   };
 
-  // Obtém a consulta de busca atual a partir dos parâmetros da URL
   const searchQuery = searchParams.get("search") || "";
 
-  // Normaliza a consulta de busca
   const normalizedSearchQuery = removeDiacritics(searchQuery.toLowerCase());
 
-  // Filtra os cursos com base na consulta de busca e na área selecionada
   const filteredCourses = courses.filter((course) => {
     const normalizedTitle = removeDiacritics(course.title.toLowerCase());
     const normalizedDescription = removeDiacritics(
@@ -87,10 +80,10 @@ const AreaExplore = () => {
         removeDiacritics(selectedArea.toLowerCase())
       : true;
 
+ 
     return matchesSearch && matchesArea;
   });
 
-  // Filtra os materiais apenas se nenhuma área estiver selecionada
   const filteredMaterials = selectedArea
     ? []
     : materials.filter((material) => {
@@ -103,35 +96,32 @@ const AreaExplore = () => {
           normalizedTitle.includes(normalizedSearchQuery) ||
           normalizedDescription.includes(normalizedSearchQuery);
 
+
         return matchesSearch;
       });
 
-  console.log("CURSOS ---", filteredCourses);
-  console.log("MATERIAIS ---", filteredMaterials);
-
   return (
     <div>
-      {/* Barra de Pesquisa Personalizada */}
       <div
         tabIndex={0}
         className="py-2 bg-gray-100 rounded-full flex items-center justify-between pl-8 pr-3 ring-2 ring-transparent focus-within:ring-2 focus-within:ring-primary transition-all duration-300 border"
       >
-        <input
+        <Input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          onKeyDown={handleKeyDown} // Detecta a tecla Enter
+          onKeyDown={handleKeyDown} 
           placeholder="O que você deseja aprender?"
-          className="bg-transparent focus:outline-none text-neutral-600"
+          className="bg-transparent border-none focus:outline-none text-neutral-600"
           aria-label="Campo de pesquisa"
         />
         <Button
-          type="button" /* Evita comportamentos de submit */
+          type="button" 
           onClick={handleSearch}
           className="bg-primary text-white rounded-full text-base flex items-center"
           aria-label="Botão para realizar pesquisa"
         >
-          Buscar
+          <span className="hidden lg:block">Buscar</span>
           <SearchIcon fill="#fff" />
         </Button>
       </div>
@@ -143,25 +133,21 @@ const AreaExplore = () => {
         </div>
       </div>
 
-      {/* Seção de Resultados */}
       {searchQuery && (
         <div className="mt-8 lg:flex-1 lg:mt-16">
           <p className="mt-10 text-neutral-700">
             Resultados para: <strong>{searchQuery}</strong> (
             {filteredCourses.length + filteredMaterials.length} encontrados)
           </p>
-          <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-3">
-            {/* Exibição de Cursos */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5 xl:grid-cols-3">
             {filteredCourses.map((course) => (
               <CardItem data={course} key={course.id} />
             ))}
 
-            {/* Exibição de Materiais */}
             {filteredMaterials.map((material) => (
               <CardItem data={material} key={material.id} />
             ))}
 
-            {/* Mensagem caso não haja cursos e materiais encontrados */}
             {filteredCourses.length === 0 && filteredMaterials.length === 0 && (
               selectedArea ? (
                 <p className="text-center text-gray-500 col-span-3">

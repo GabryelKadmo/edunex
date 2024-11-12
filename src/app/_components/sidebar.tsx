@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import HomeIcon from "@/components/icons/home-icon";
 import CursoIcon from "@/components/icons/curso-icon";
 import DicasIcon from "@/components/icons/dicas-icon";
-import CurriculoIcon from "@/components/icons/curriculo-icon";
+// import CurriculoIcon from "@/components/icons/curriculo-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import Image from "next/image";
 import SearchIcon from "@/components/icons/search-icon";
@@ -43,12 +43,12 @@ const navItems: NavItemType[] = [
     href: "/explore",
     active: true,
   },
-  {
-    text: "Currículo",
-    icon: CurriculoIcon,
-    href: "/gerador-de-curriculo",
-    active: true,
-  },
+  // {
+  //   text: "Currículo",
+  //   icon: CurriculoIcon,
+  //   href: "/gerador-de-curriculo",
+  //   active: true,
+  // },
 ];
 
 export const Sidebar = () => {

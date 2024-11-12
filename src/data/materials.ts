@@ -99,6 +99,105 @@ const materials: Material[] = [
     author: "Juliana Ferreira",
     reference: "Canal GeoFácil"
   }
+,
+{
+  id: 11,
+  title: "Guia de Estudos de Literatura",
+  description: "Este guia de estudos de literatura oferece uma visão abrangente das principais obras e autores da literatura mundial. Com resumos, análises e exercícios, o guia é uma ferramenta essencial para estudantes que desejam aprofundar seus conhecimentos literários.",
+  image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=800",
+  type: "Dicas",
+  urlFile: "https://example.com/files/guia-literatura.pdf",
+  author: "Laura Martins",
+  reference: "Editora Saber"
+},
+{
+  id: 12,
+  title: "E-book de Biologia",
+  description: "Este e-book de biologia aborda os principais conceitos da biologia, desde a célula até os ecossistemas. Com linguagem clara e objetiva, o e-book é ideal para estudantes do ensino médio e para aqueles que estão se preparando para vestibulares.",
+  image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=800",
+  type: "E-book",
+  urlFile: "https://example.com/files/ebook-biologia.pdf",
+  author: "Renato Souza",
+  reference: "Editora Vida"
+},
+{
+  id: 13,
+  title: "Planilha de Controle Financeiro",
+  description: "Esta planilha de controle financeiro foi desenvolvida para ajudar os estudantes a gerenciar suas finanças pessoais. Com ela, é possível registrar receitas e despesas, acompanhar o saldo e planejar o orçamento mensal.",
+  image: "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800",
+  type: "Planilhas",
+  urlFile: "https://example.com/files/planilha-financeiro.xlsx",
+  author: "Gabriel Lima",
+  reference: "Blog Finanças Pessoais"
+},
+{
+  id: 14,
+  title: "Podcast sobre Filosofia",
+  description: "Este podcast sobre filosofia discute os principais conceitos e pensadores da filosofia ocidental. Com episódios semanais, o podcast traz entrevistas com filósofos e especialistas, além de análises detalhadas sobre temas filosóficos.",
+  image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800",
+  type: "Podcasts",
+  author: "Clara Mendes",
+  reference: "Podcast Filosofia Viva"
+},
+{
+  id: 15,
+  title: "Vídeo Aula de Química",
+  description: "Esta vídeo aula sobre os conceitos básicos de química aborda temas como a tabela periódica, ligações químicas e reações químicas. Com exemplos práticos e experimentos, a vídeo aula facilita a compreensão dos conceitos teóricos.",
+  image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+  type: "Vídeos",
+  urlFile: "https://example.com/files/video-quimica.mp4",
+  author: "Lucas Pereira",
+  reference: "Canal Química Fácil"
+},
+{
+  id: 16,
+  title: "Dicas de Organização Pessoal",
+  description: "Estas dicas de organização pessoal ajudam os estudantes a gerenciar melhor seu tempo e suas atividades. Com sugestões práticas e estratégias eficientes, é possível aumentar a produtividade e reduzir o estresse.",
+  image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=800",
+  type: "Dicas",
+  urlFile: "https://example.com/files/dicas-organizacao.pdf",
+  author: "Mariana Silva",
+  reference: "Revista Vida Organizada"
+},
+{
+  id: 17,
+  title: "E-book de Física",
+  description: "Este e-book de física aborda os principais conceitos da física, desde a mecânica até a termodinâmica. Com linguagem clara e objetiva, o e-book é ideal para estudantes do ensino médio e para aqueles que estão se preparando para vestibulares.",
+  image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?w=800",
+  type: "E-book",
+  urlFile: "https://example.com/files/ebook-fisica.pdf",
+  author: "Pedro Almeida",
+  reference: "Editora Ciência"
+},
+{
+  id: 18,
+  title: "Planilha de Planejamento de Projetos",
+  description: "Esta planilha de planejamento de projetos foi desenvolvida para ajudar os estudantes a organizar e gerenciar seus projetos acadêmicos. Com ela, é possível definir metas, prazos e acompanhar o progresso das atividades.",
+  image: "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=800",
+  type: "Planilhas",
+  urlFile: "https://example.com/files/planilha-projetos.xlsx",
+  author: "Ana Paula",
+  reference: "Blog Gestão de Projetos"
+},
+{
+  id: 19,
+  title: "Podcast sobre Tecnologia",
+  description: "Este podcast sobre tecnologia discute as últimas tendências e inovações no mundo da tecnologia. Com episódios semanais, o podcast traz entrevistas com especialistas e análises detalhadas sobre temas tecnológicos.",
+  image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800",
+  type: "Podcasts",
+  author: "Ricardo Santos",
+  reference: "Podcast TechNews"
+},
+{
+  id: 20,
+  title: "Vídeo Aula de História",
+  description: "Esta vídeo aula sobre os conceitos básicos de história aborda temas como a antiguidade, a idade média e a idade moderna. Com exemplos práticos e análises detalhadas, a vídeo aula facilita a compreensão dos eventos históricos.",
+  image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+  type: "Vídeos",
+  urlFile: "https://example.com/files/video-historia.mp4",
+  author: "Fernanda Costa",
+  reference: "Canal História Fácil"
+}
 ];
 
 export default materials;

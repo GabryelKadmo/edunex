@@ -3,92 +3,140 @@ import { Member } from "@/types/member";
 export const members: Member[] = [
   {
     id: 1,
-    name: "Ana Clara",
+    name: "Bruno Arouca",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
     position: "Desenvolvedor"
   },
   {
     id: 2,
-    name: "Bruno Henrique",
+    name: "Gabryel Kadmo",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
-    position: "Marketing"
+    position: "Desenvolvedor"
   },
   {
     id: 3,
-    name: "Carla Maria",
+    name: "André Lucas",
     image: "https://randomuser.me/api/portraits/women/3.jpg",
-    position: "Designer"
+    position: "Desenvolvedor"
   },
   {
     id: 4,
-    name: "Daniel Augusto",
+    name: "Gustavo Souza",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
-    position: "Marketing"
+    position: "Desenvolvedor"
   },
   {
     id: 5,
-    name: "Eduarda Pires",
+    name: "Kamille Vitória",
     image: "https://randomuser.me/api/portraits/women/5.jpg",
-    position: "Curador de conteudo"
+    position: "Conteúdo"
   },
   {
     id: 6,
-    name: "Fernando Silva",
+    name: "Mateus Fellipi",
     image: "https://randomuser.me/api/portraits/men/6.jpg",
     position: "Desenvolvedor"
   },
   {
     id: 7,
-    name: "Gabriela Oliveira",
+    name: "Vinicius Sena",
     image: "https://randomuser.me/api/portraits/women/7.jpg",
     position: "Marketing"
   },
   {
     id: 8,
-    name: "Henrique Gomes",
+    name: "Felippe Souza",
     image: "https://randomuser.me/api/portraits/men/8.jpg",
     position: "Marketing"
   },
   {
     id: 9,
-    name: "Isabela Martins",
+    name: "Alberto Duarte",
     image: "https://randomuser.me/api/portraits/women/9.jpg",
     position: "Desenvolvedor"
   },
   {
     id: 10,
-    name: "João Pedro",
+    name: "Maria Eduarda",
     image: "https://randomuser.me/api/portraits/men/10.jpg",
     position: "Desenvolvedor"
   },
   {
     id: 11,
-    name: "Karla Dias",
+    name: "Wellen Souza",
     image: "https://randomuser.me/api/portraits/women/11.jpg",
-    position: "Curador de conteudo"
+    position: "Gestora de Projetos"
   },
   {
     id: 12,
-    name: "Lucas Fernando",
+    name: "Victor Hugo",
     image: "https://randomuser.me/api/portraits/men/12.jpg",
     position: "Marketing"
   },
   {
     id: 13,
-    name: "Mariana Lima",
+    name: "Emanuel Helano",
     image: "https://randomuser.me/api/portraits/women/13.jpg",
     position: "Redator"
   },
   {
     id: 14,
-    name: "Nicolas Ribeiro",
+    name: "Alberto Luiz",
     image: "https://randomuser.me/api/portraits/men/14.jpg",
     position: "Marketing"
   },
   {
     id: 15,
-    name: "Olivia Fernandes",
+    name: "Fernanda Guedes",
     image: "https://randomuser.me/api/portraits/women/15.jpg",
-    position: "Curador de conteudo"
-  }
+    position: "Conteúdo"
+  },
+  {
+    id: 16,
+    name: "Jeovana dos Santos",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 17,
+    name: "Janaina Silva",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 18,
+    name: "Giulia Caetano",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 19,
+    name: "Ryan Lobo",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 20,
+    name: "Danielle Pinheiro",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 21,
+    name: "Mell Rany",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 22,
+    name: "Brenda Brandão",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
+  {
+    id: 23,
+    name: "Jonathan da Silva",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    position: "Conteúdo"
+  },
 ];

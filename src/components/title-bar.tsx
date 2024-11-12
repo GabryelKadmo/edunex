@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ShareIcon } from "lucide-react";
+import { ChevronLeft, Share2Icon } from "lucide-react";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -17,10 +17,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Material } from "@/types/material";
 
 type Props = {
   title: string;
-  data?: Course;
+  data?: Course | Material;
 };
 export const TitleBar = ({ title, data }: Props) => {
   const router = useRouter();
@@ -47,7 +48,7 @@ export const TitleBar = ({ title, data }: Props) => {
         <Popover>
           <PopoverTrigger asChild>
             <Button size={"icon"} variant={"ghost"} className="border">
-              <ShareIcon className="w-[100px] h-[100px]" />
+              <Share2Icon className="w-[100px] h-[100px]" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-auto">

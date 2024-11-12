@@ -65,9 +65,9 @@ export const MenuMobile = () => {
           <Button className="text-neutral-600 bg-primary-50 px-7 py-3.5 rounded-full hover:text-primary-50" onClick={handleBack}>
             Voltar
           </Button>
-          <Link href={curso?.link || "#"} className="bg-primary text-primary-50 px-10 py-3.5 rounded-full">
+            <Link href={curso?.link || "#"} target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-50 px-10 py-3.5 rounded-full">
             Ir para o Curso
-          </Link>
+            </Link>
         </div>
       );
     }
@@ -89,13 +89,13 @@ export const MenuMobile = () => {
               )}
               <Link
                 href={item.href}
-                className={`flex items-center gap-3 py-4 relative z-10 ${isActive ? " text-primary px-5 sm:px-8" : "px-1 text-neutral-600"} `}
+                className={`flex items-center gap-3 py-3 relative z-10 ${isActive ? " text-primary px-4 sm:px-6" : "px-1 text-neutral-600"} `}
               >
                 {isActive && (
                   <item.icon
                     variant="solid"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                     fill="currentColor"
                     className="mb-1"
                   />

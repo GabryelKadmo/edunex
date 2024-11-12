@@ -4,7 +4,6 @@ import "./globals.css";
 import { MenuMobile } from "./_components/menu-mobile";
 import { Sidebar } from "./_components/sidebar";
 import { TopBar } from "@/components/topbar";
-import { Footer } from "@/components/footer";
 
 const fontsans = Onest({
   subsets: ['latin'],
@@ -27,20 +26,17 @@ export default function RootLayout({
         className={`${fontsans.className} antialiased bg-[#F8F9FA]`}
       >
         <div className="h-full w-full">
-        <aside className="fixed hidden md:block bg-white h-screen w-full max-w-[256px] z-30">
+        <aside className="fixed hidden lg:block bg-white h-screen w-full max-w-[256px] z-30">
           <Sidebar />
         </aside>
 
-        <main className="flex-1 h-full py-[30px] md:py-0 md:mt-0 md:ml-[256px] lg:py-0 lg:pt-6">
-          <section className="w-full flex flex-col gap-4 md:gap-7 lg:gap-4 h-full mx-auto max-w-7xl">
+        <main className="flex-1 h-full py-[30px] md:py-0 md:mt-0 lg:ml-[256px] lg:py-0">
+          <section className="pt-7 lg:pb-0 w-full flex flex-col gap-4 md:gap-7 lg:gap-4 mx-auto max-w-7xl">
             <div className="hidden lg:block px-8">
              <TopBar/>
             </div>
             {children}
           </section>
-          <footer className="my-16 md:my-0 md:mt-10">
-          <Footer />
-        </footer>
         </main>
 
         <div className="md:hidden fixed z-50 bottom-0 left-0 w-full">

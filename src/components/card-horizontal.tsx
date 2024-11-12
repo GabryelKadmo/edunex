@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Material } from "@/types/material";
+import { createSlug } from "@/utils/format-string";
+import Link from "next/link";
 
 type Props = {
   data: Material;
 };
 
 export const CardHorizontal = ({ data }: Props) => {
+  const slug = createSlug(data.title);
   return (
-    <div className="w-full flex gap-4 items-center">
+    <Link href={`/materiais/${slug}`} className="w-full flex gap-4 items-center">
       <div className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] lg:w-[120px] lg:h-[120px] overflow-hidden relative rounded-2xl flex-shrink-0">
       <Image alt="sa" src={data.image} fill className="object-cover" />
       </div>
@@ -28,6 +31,6 @@ export const CardHorizontal = ({ data }: Props) => {
         </span>
       </div>
       </div>
-    </div>
+    </Link>
   );
 };
