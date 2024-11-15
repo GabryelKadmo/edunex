@@ -1,10 +1,13 @@
 import { ListAreas } from "@/components/list-areas";
 import { TitleBar } from "@/components/title-bar";
-import { courses } from "@/data/courses";
 import AreaCursos from "./_components/area-cursos";
 import { Footer } from "@/components/footer";
+import { getCursos } from "../actions";
 
-const CursosPage = () => {
+const CursosPage = async () => {
+
+  const courses = await getCursos();
+
   return (
     <>
       <div className="px-6 lg:px-8 lg:hidden">

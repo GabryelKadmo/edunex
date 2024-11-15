@@ -3,18 +3,18 @@
 import { ListAreas } from "@/components/list-areas";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { courses } from "@/data/courses";
 import materials from "@/data/materials";
 import { CardItem } from "@/components/card-item";
 import { Button } from "@/components/ui/button";
 import SearchIcon from "@/components/icons/search-icon";
 import { Input } from "@/components/ui/input";
+import { Course } from "@/types/course";
 
 const removeDiacritics = (str: string): string => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-const AreaExplore = () => {
+const AreaExplore = ({courses}: {courses: Course[]}) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -106,7 +106,7 @@ const AreaExplore = () => {
         tabIndex={0}
         className="py-2 bg-gray-100 rounded-full flex items-center justify-between pl-8 pr-3 ring-2 ring-transparent focus-within:ring-2 focus-within:ring-primary transition-all duration-300 border"
       >
-        <Input
+        <input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
@@ -126,7 +126,7 @@ const AreaExplore = () => {
         </Button>
       </div>
 
-      <div className="mt-8 lg:mt-20">
+      <div className="mt-8 lg:mt-12">
         <h3 className="font-semibold text-neutral-700">Pesquisar por cursos</h3>
         <div className="mt-6">
           <ListAreas />

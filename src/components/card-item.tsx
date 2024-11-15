@@ -18,11 +18,11 @@ export const CardItem = ({ data }: Props) => {
     return (
       <Link
         href={`/cursos/${slug}`}
-        className="w-full min-w-[320px] lg:min-w-full h-[390px] md:w-full p-4 bg-white rounded-2xl text-gray-700 border border-transparent whitespace-normal flex flex-col justify-between transition duration-300 hover:border-gray-200 hover:bg-primary-50"
+        className="w-full min-w-[320px] lg:min-w-full h-[400px] md:w-full p-4 bg-white rounded-2xl text-gray-700 border border-transparent whitespace-normal flex flex-col justify-between transition duration-300 lg:hover:border-gray-200 lg:hover:bg-primary-50"
       >
         <div>
           <div className="w-full h-[220px] overflow-hidden relative rounded-2xl">
-            <Image alt="sa" src={data.image} fill className="object-cover" />
+            <Image alt={data.title} src={data.image || "/bg-hero.jpg"} fill className="object-cover" />
             {data.hasCertificate && (
             <Badge className="py-1.5 text-sm absolute font-medium gap-2 bottom-5 right-5 bg-primary">
               <CertificateIcon />
@@ -59,7 +59,7 @@ export const CardItem = ({ data }: Props) => {
     return (
       <Link
         href={`/materiais/${slug}`}
-        className="w-full min-w-[320px] lg:min-w-full h-[390px] md:w-full p-4 bg-white rounded-2xl text-gray-700 border border-transparent whitespace-normal flex flex-col justify-between transition duration-300 hover:border-gray-200 hover:bg-primary-50"
+        className="w-full min-w-[320px] lg:min-w-full h-[400px] md:w-full p-4 bg-white rounded-2xl text-gray-700 border border-transparent whitespace-normal flex flex-col justify-between transition duration-300 lg:hover:border-gray-200 lg:hover:bg-primary-50"
       >
         <div>
           <div className="w-full h-52 overflow-hidden relative rounded-2xl">

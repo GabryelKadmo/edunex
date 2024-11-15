@@ -20,6 +20,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="pt-br">
       <body
@@ -39,7 +40,7 @@ export default function RootLayout({
           </section>
         </main>
 
-        <div className="md:hidden fixed z-50 bottom-0 left-0 w-full">
+        <div className="md:hidden fixed z-40 bottom-0 left-0 w-full">
           <MenuMobile />
         </div>
         

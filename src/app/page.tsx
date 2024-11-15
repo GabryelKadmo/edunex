@@ -10,8 +10,11 @@ import materials from "@/data/materials";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
+import { getCursos } from "./actions";
 
-export default function Home() {
+export default async function Home() {
+  const courses = await getCursos();
+
   return (
     <>
       <header className="">

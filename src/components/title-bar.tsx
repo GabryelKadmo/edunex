@@ -47,9 +47,13 @@ export const TitleBar = ({ title, data }: Props) => {
       {data && (
         <Popover>
           <PopoverTrigger asChild>
+            <div className="flex items-center gap-5 cursor-pointer">
+            <span className="text-primary-950">Compartilhe</span>
             <Button size={"icon"} variant={"ghost"} className="border">
               <Share2Icon className="w-[100px] h-[100px]" />
             </Button>
+            </div>
+            
           </PopoverTrigger>
           <PopoverContent className="w-auto">
             <div className="flex gap-2">
