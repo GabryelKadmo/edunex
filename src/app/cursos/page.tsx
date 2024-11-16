@@ -2,7 +2,7 @@ import { ListAreas } from "@/components/list-areas";
 import { TitleBar } from "@/components/title-bar";
 import AreaCursos from "./_components/area-cursos";
 import { Footer } from "@/components/footer";
-import { getCursos } from "../actions";
+import { getCursos } from "./actions";
 
 const CursosPage = async () => {
 

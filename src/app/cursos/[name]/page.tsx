@@ -1,4 +1,4 @@
-import { getCursos } from "@/app/actions";
+import { getCursos } from "@/app/cursos/actions";
 import { Footer } from "@/components/footer";
 import ClockIcon from "@/components/icons/clock-icon";
 import FlagIcon from "@/components/icons/flag-icon";
@@ -69,7 +69,7 @@ const PageSingleCourse = async ({
               <p className="text-neutral-400 mt-2"><span>Visualizado em:</span> <span>{curso.registrationDate}</span></p>
             </div>
             <div className="mt-6 border-t py-6">
-              <p className="text-base text-neutral-700 leading-6">
+              <p className="text-base text-neutral-700 leading-6 whitespace-pre-wrap">
                 {curso.description}
               </p>
               <div className="mt-5 text-neutral-600 text-sm flex gap-3 flex-col lg:flex-row lg:gap-7">
@@ -87,7 +87,7 @@ const PageSingleCourse = async ({
               href={curso.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:block mt-2 w-full bg-primary-600 text-white py-3 text-center rounded transition hover:bg-primary-700"
+              className="hidden lg:block mt-2 w-full bg-primary-600 text-white py-3 text-center rounded transition lg:hover:bg-primary-700"
             >
               Acessar Curso
             </Link>
@@ -99,10 +99,10 @@ const PageSingleCourse = async ({
         <Separator />
       </div>
 
-      <section className="px-6 lg:px-8 mt-10">
-        <h3 className="text-xl text-neutral-700 font-semibold">Cursos da mesma área</h3>
+      <section className="lg:px-8 mt-10">
+        <h3 className=" px-6 text-xl text-neutral-700 font-semibold">Cursos da mesma área</h3>
       <ScrollArea className="w-full lg:whitespace-nowrap">
-            <div className="flex lg:grid  w-full gap-6 py-4 lg:grid-cols-3">
+            <div className="flex lg:grid px-6 w-full gap-6 py-4 lg:grid-cols-3">
                 {courses
                 .filter((course) => course.category.area.id === curso.category.area.id && course.id !== curso.id)
                 .slice(0, 6)
@@ -110,7 +110,7 @@ const PageSingleCourse = async ({
                   <CardItem key={course.id} data={course} />
                 ))}
             </div>
-            <ScrollBar orientation="horizontal" />
+            <ScrollBar orientation="horizontal" className="px-6"/>
           </ScrollArea>
       </section>
 

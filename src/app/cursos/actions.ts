@@ -45,3 +45,4 @@ export async function getCursos() {
 
   return cursos;
 }
+

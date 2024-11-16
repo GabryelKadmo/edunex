@@ -1,7 +1,7 @@
 import { TitleBar } from "@/components/title-bar";
 import AreaExplore from "./_components/area-explore";
 import { Footer } from "@/components/footer";
-import { getCursos } from "../actions";
+import { getCursos } from "../cursos/actions";
 
 export default async function ExplorePage() {
 

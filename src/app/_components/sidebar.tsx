@@ -55,9 +55,11 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="px-6 bg-white w-full h-full border-r border-black/10">
+    <div className=" bg-white w-full h-full ">
       <div className="py-6 border-b border-primary-50 flex justify-center">
+       <Link href="/"> 
         <Image alt="Logo Edunex" src={"/logo.svg"} height={30} width={190} />
+       </Link>
       </div>
       <ul className="py-6 space-y-2">
         {navItems.map((item, index) => {
@@ -69,7 +71,7 @@ export const Sidebar = () => {
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-md relative z-10 ${
                   isActive
                     ? "bg-primary-50 text-primary"
-                    : "hover:bg-primary-300 hover:text-white text-gray-500"
+                    : "lg:hover:bg-primary-300 lg:hover:text-white text-gray-500"
                 }`}
               >
                 <item.icon
@@ -78,11 +80,11 @@ export const Sidebar = () => {
                   height={18}
                   fill="currentColor"
                   className={`mb-1 ${
-                    isActive ? "text-primary" : "hover:text-white"
+                    isActive ? "text-primary" : "lg:hover:text-white"
                   }`}
                 />
                 <span
-                  className={`text-sm font-medium hover:text-white${
+                  className={`text-sm font-medium lg:hover:text-white${
                     isActive ? "text-primary" : "text-gray-500"
                   }`}
                 >

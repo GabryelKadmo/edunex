@@ -8,3 +8,14 @@ export interface Material {
   author: string;
   reference: string;
 }
+
+export interface DBMaterial {
+  id: number;
+  titulo: string;
+  descricao: string;
+  imagem: string;
+  tipo: "Dicas" | "E-book" | "Planilhas" | "Podcasts" | "Vídeos";
+  anexo?: string;
+  autor: string;
+  referencia: string;
+}

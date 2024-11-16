@@ -48,7 +48,7 @@ export const TitleBar = ({ title, data }: Props) => {
         <Popover>
           <PopoverTrigger asChild>
             <div className="flex items-center gap-5 cursor-pointer">
-            <span className="text-primary-950">Compartilhe</span>
+            <span className="text-primary-950">Compartilhar</span>
             <Button size={"icon"} variant={"ghost"} className="border">
               <Share2Icon className="w-[100px] h-[100px]" />
             </Button>

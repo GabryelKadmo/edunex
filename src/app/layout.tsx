@@ -27,7 +27,7 @@ export default function RootLayout({
         className={`${fontsans.className} antialiased bg-[#F8F9FA]`}
       >
         <div className="h-full w-full">
-        <aside className="fixed hidden lg:block bg-white h-screen w-full max-w-[256px] z-30">
+        <aside className="fixed hidden px-6 lg:block bg-white h-screen w-full max-w-[256px] z-30 border-r border-black/10">
           <Sidebar />
         </aside>
 

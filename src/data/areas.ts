@@ -13,7 +13,7 @@ export const areas: Area[] = [
   },
   {
     id: 3,
-    name: "Evolução",
+    name: "Crescimento",
     icon: "/icons/evolucao-pessoal.svg"
   },
   {
