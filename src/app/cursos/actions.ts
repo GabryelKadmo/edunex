@@ -2,10 +2,11 @@
 
 import { categories } from "@/data/categories";
 import { Course, DBCurso } from "@/types/course";
+import cursosData from "@/data/cursos.json";
 
 export async function getCursos() {
-  const response = await fetch(`/data/cursos.json`);
-  const data: DBCurso[] = await response.json();
+
+  const data: DBCurso[] = cursosData;
 
   const cursos: Course[] = data.map((curso) => {
     const isValidImage =

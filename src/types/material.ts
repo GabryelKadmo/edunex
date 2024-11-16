@@ -14,7 +14,7 @@ export interface DBMaterial {
   titulo: string;
   descricao: string;
   imagem: string;
-  tipo: "Dicas" | "E-book" | "Planilhas" | "Podcasts" | "Vídeos";
+  tipo: string;
   anexo?: string;
   autor: string;
   referencia: string;

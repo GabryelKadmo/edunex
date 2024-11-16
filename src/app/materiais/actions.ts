@@ -1,9 +1,10 @@
 import { DBMaterial, Material } from "@/types/material";
 import { createSlug } from "@/utils/format-string";
+import materiaisData from "@/data/materiais.json";
 
 export async function getMateriais() {
-  const response = await fetch(`/data/materiais.json`);
-  const data: DBMaterial[] = await response.json();
+  
+  const data: DBMaterial[] = materiaisData;
 
   const materiais: Material[] = data.map((material) => {
     const isValidImage =
@@ -19,7 +20,7 @@ export async function getMateriais() {
       author: material.autor,
       image: isValidImage ? material.imagem : "/bg-about.png",
       reference: material.referencia,
-      type: material.tipo,
+      type: material.tipo as "Dicas" | "E-book" | "Planilhas" | "Podcasts" | "Vídeos",
       urlFile: material.anexo || "",
     };
   });
