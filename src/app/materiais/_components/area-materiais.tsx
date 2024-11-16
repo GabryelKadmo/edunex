@@ -12,19 +12,6 @@ interface Props {
 }
 
 export default function AreaMateriais({ materials }: Props) {
-  const [visibleCount, setVisibleCount] = useState(6);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const loadMore = () => {
-    setIsLoading(true);
-    // Simula um tempo de espera de 2 segundos
-    setTimeout(() => {
-      setVisibleCount((prev) => prev + 6);
-      setIsLoading(false);
-    }, 1000);
-  };
-
-  const visibleMaterials = materials.slice(4, 4 + visibleCount);
 
   return (
     <>
@@ -41,30 +28,13 @@ export default function AreaMateriais({ materials }: Props) {
         ))}
       </div>
       <div className="mt-16 w-full grid grid-cols-1 gap-8 lg:grid-cols-2">
-        {visibleMaterials.map((material) => (
+        {materials.slice(3).map((material) => (
           <div key={material.id}>
             <CardHorizontal data={material} />
           </div>
         ))}
       </div>
 
-      {isLoading && (
-        <div className="flex items-center justify-center mt-8 text-primary">
-          <Loader2 className="h-11 w-11 animate-spin" />
-          <span className="ml-2">Carregando...</span>
-        </div>
-      )}
-
-      {visibleCount < materials.length && (
-        <Button
-          onClick={loadMore}
-          variant={"ghost"}
-          className="w-full mt-16 px-4 py-2 border rounded text-neutral-600"
-          disabled={isLoading}
-        >
-          {isLoading ? "Carregando..." : "Carregar mais"}
-        </Button>
-      )}
     </>
   );
 }

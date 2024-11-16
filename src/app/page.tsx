@@ -5,25 +5,29 @@ import { ListAreas } from "@/components/list-areas";
 import Members from "@/components/members";
 import { SearchInputButton } from "@/components/search-input-button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { courses } from "@/data/courses";
-import materials from "@/data/materials";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
+import { getCursos } from "./cursos/actions";
+import { getMateriais } from "./materiais/actions";
+import { ButtonMenu } from "./_components/button-menu";
 
-export default function Home() {
+export default async function Home() {
+  const courses = await getCursos();
+  const materials = await getMateriais();
+
   return (
     <>
       <header className="">
         <div className="md:hidden px-6 md:px-8 flex justify-between items-center">
           <Image
             alt="Logo Edunex"
-            src={"/logoicon.svg"}
-            width={43}
-            height={43}
+            src={"/logoicon2.svg"}
+            width={50}
+            height={50}
           />
-
-          <MenuIcon />
+          
+          <ButtonMenu />
         </div>
       </header>
       <section className="px-8 hidden lg:block">

@@ -14,7 +14,7 @@ export const ListAreas = () => {
             href={`/explore?search=${encodeURIComponent(area.name)}`}
             className="text-center cursor-pointer"
           >
-            <div className="bg-gray-100 rounded-2xl h-[72px] sm:h-[120px] lg:h-[100px] flex justify-center items-center lg:mb-3 transition duration-300 hover:bg-primary-100">
+            <div className="bg-gray-100 rounded-2xl h-[72px] sm:h-[120px] lg:h-[100px] flex justify-center items-center lg:mb-3 transition duration-300 lg:hover:bg-primary-100">
               <Image
                 src={area.icon}
                 alt={area.name}

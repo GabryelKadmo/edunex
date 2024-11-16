@@ -20,13 +20,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="pt-br">
       <body
         className={`${fontsans.className} antialiased bg-[#F8F9FA]`}
       >
         <div className="h-full w-full">
-        <aside className="fixed hidden lg:block bg-white h-screen w-full max-w-[256px] z-30">
+        <aside className="fixed hidden px-6 lg:block bg-white h-screen w-full max-w-[256px] z-30 border-r border-black/10">
           <Sidebar />
         </aside>
 
@@ -39,7 +40,7 @@ export default function RootLayout({
           </section>
         </main>
 
-        <div className="md:hidden fixed z-50 bottom-0 left-0 w-full">
+        <div className="md:hidden fixed z-40 bottom-0 left-0 w-full">
           <MenuMobile />
         </div>
         
