@@ -133,10 +133,10 @@ const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
         <Separator />
       </div>
 
-      <section className="lg:px-8 mt-10">
-        <h3 className=" px-6 text-xl text-neutral-700 font-semibold">Cursos da mesma área</h3>
+      <section className="mt-10">
+        <h3 className="px-6 lg:px-8 text-xl text-neutral-700 font-semibold">Cursos da mesma área</h3>
       <ScrollArea className="w-full lg:whitespace-nowrap">
-            <div className="flex lg:grid px-6 w-full gap-6 py-4 lg:grid-cols-3">
+            <div className="flex lg:grid px-6 lg:px-8 w-full gap-6 py-4 lg:grid-cols-3">
                 {courses
                 .filter((course) => course.category.area.id === curso.category.area.id && course.id !== curso.id)
                 .slice(0, 6)
