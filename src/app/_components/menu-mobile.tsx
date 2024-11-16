@@ -2,15 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import HomeIcon from "@/components/icons/home-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import SearchIcon from "@/components/icons/search-icon";
 import DicasIcon from "@/components/icons/dicas-icon";
-import { Button } from "@/components/ui/button";
-import { courses } from "@/data/courses";
-import { createSlug } from "@/utils/format-string";
+
 import CursoIcon from "@/components/icons/curso-icon";
 
 type NavItemType = {
