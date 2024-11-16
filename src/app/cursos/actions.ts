@@ -3,11 +3,8 @@
 import { categories } from "@/data/categories";
 import { Course, DBCurso } from "@/types/course";
 
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
 export async function getCursos() {
-  const response = await fetch(`${BASE_URL}/data/cursos.json`);
+  const response = await fetch(`/data/cursos.json`);
   const data: DBCurso[] = await response.json();
 
   const cursos: Course[] = data.map((curso) => {
