@@ -3,6 +3,7 @@
 import { categories } from "@/data/categories";
 import { Course, DBCurso } from "@/types/course";
 import cursosData from "@/data/cursos.json";
+import { createSlug } from "@/utils/format-string";
 
 export async function getCursos() {
 
@@ -44,3 +45,8 @@ export async function getCursos() {
   return cursos;
 }
 
+export async function getCursoBySlug(slug: string) {
+  const cursos = await getCursos();
+
+  return cursos.find(curso => createSlug(curso.title) === slug);
+}

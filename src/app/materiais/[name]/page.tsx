@@ -8,6 +8,47 @@ import { getCursos } from "@/app/cursos/actions";
 import { CardItem } from "@/components/card-item";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import BottomBar from "@/app/cursos/_components/bottom-bar";
+import { Metadata } from "next";
+import { createSlug } from "@/utils/format-string";
+
+export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
+  const material = await getMaterialBySlug(params.name);
+
+  if (!material) {
+    return {
+      title: 'Material não encontrado | Edunex',
+      description: 'O material que você está procurando não foi encontrado.',
+    };
+  }
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  return {
+    title: `Edunex | ${material.title}`,
+    description: material.description,
+    openGraph: {
+      title: `${material.title} | Edunex`,
+      description: material.description,
+      url: `${baseUrl}/materiais/${createSlug(material.title)}`,
+      images: [
+        {
+          url: material.image ? material.image : `${baseUrl}/card.png`,
+          alt: material.title,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      siteName: 'Edunex',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${material.title} | Edunex`,
+      description: material.description,
+      images: [material.image ? material.image : `${baseUrl}/card.png`],
+    },
+  };
+}
 
 const PageDicasSingle = async ({
   params,

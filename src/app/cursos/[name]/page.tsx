@@ -1,4 +1,4 @@
-import { getCursos } from "@/app/cursos/actions";
+import { getCursoBySlug, getCursos } from "@/app/cursos/actions";
 import { Footer } from "@/components/footer";
 import ClockIcon from "@/components/icons/clock-icon";
 import FlagIcon from "@/components/icons/flag-icon";
@@ -12,17 +12,53 @@ import CertificateIcon from "@/components/icons/certificate-icon";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { CardItem } from "@/components/card-item";
 import { Separator } from "@/components/ui/separator";
+import { Metadata } from "next";
 
-const PageSingleCourse = async ({
-  params,
-}: {
-  params: Promise<{ name: string }>;
-}) => {
-  const name = (await params).name;
-  const courses = await getCursos();
+export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
+  const curso = await getCursoBySlug(params.name);
 
-  const curso = courses.find((course) => createSlug(course.title) === name);
+  if (!curso) {
+    return {
+      title: 'Curso não encontrado | Edunex',
+      description: 'O curso que você está procurando não foi encontrado.',
+    };
+  }
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  return {
+    title: `Edunex | ${curso.title}`,
+    description: curso.description,
+    openGraph: {
+      title: `${curso.title} | Edunex`,
+      description: curso.description,
+      url: `${baseUrl}/cursos/${createSlug(curso.title)}`,
+      images: [
+        {
+          url: curso.image ? curso.image : `${baseUrl}/card.png`,
+          alt: curso.title,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      siteName: 'Edunex',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${curso.title} | Edunex`,
+      description: curso.description,
+      images: [curso.image ? curso.image : `${baseUrl}/card.png`],
+    },
+  };
+}
+
+
+const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
+  const curso = await getCursoBySlug(params.name);
+
   if (!curso) return <h1>Curso não encontrado</h1>;
+  const courses = await getCursos();
 
   return (
     <>

@@ -11,8 +11,38 @@ const fontsans = Onest({
 })
 
 export const metadata: Metadata = {
-  title: "Edunex",
-  description: "Edunex - Encontre cursos gratuitos com certificado e conteúdo para desenvolvimento pessoal e profissional.",
+  title: "Edunex - Encontre cursos gratuitos com certificado",
+  description: "Edunex oferece uma vasta seleção de cursos gratuitos com certificado para seu desenvolvimento pessoal e profissional.",
+  keywords: ["cursos gratuitos", "certificado", "desenvolvimento pessoal", "desenvolvimento profissional", "Edunex"],
+  authors: [{ name: "Edunex", url: `${process.env.NEXT_PUBLIC_BASE_URL}`}],
+  creator: "Edunex",
+  openGraph: {
+    title: "Edunex - Encontre cursos gratuitos com certificado",
+    description: "Descubra uma ampla variedade de cursos gratuitos com certificado para impulsionar seu desenvolvimento pessoal e profissional na Edunex.",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+    siteName: "Edunex",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/card.png`,
+        width: 1200,
+        height: 630,
+        alt: "Edunex - Encontre Cursos Gratuitos",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Edunex - Encontre cursos gratuitos com certificado",
+    description: "Acesse cursos gratuitos com certificado na Edunex e desenvolva suas habilidades pessoais e profissionais.",
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/card.png`],
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
