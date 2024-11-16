@@ -80,7 +80,7 @@ export const CardItem = ({ data }: Props) => {
           <div className="flex items-center gap-0.5">
             <span className="text-sm text-neutral-500">por</span>
             <span className="text-sm font-medium text-neutral-500">
-              {data.author}h
+              {data.author}
             </span>
           </div>
         </div>

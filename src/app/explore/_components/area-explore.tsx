@@ -3,19 +3,19 @@
 import { ListAreas } from "@/components/list-areas";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import materials from "@/data/materials";
 import { CardItem } from "@/components/card-item";
 import { Button } from "@/components/ui/button";
 import SearchIcon from "@/components/icons/search-icon";
 import { Course } from "@/types/course";
 import { Loader2 } from "lucide-react";
+import { Material } from "@/types/material";
 
 
 const removeDiacritics = (str: string): string => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-const AreaExplore = ({ courses }: { courses: Course[] }) => {
+const AreaExplore = ({ courses, materials }: { courses: Course[], materials: Material[] }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
