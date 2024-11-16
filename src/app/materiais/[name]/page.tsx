@@ -1,14 +1,11 @@
 import { Footer } from "@/components/footer";
 import { TitleBar } from "@/components/title-bar";
 import { Badge } from "@/components/ui/badge";
-import materials from "@/data/materials";
-import { createSlug } from "@/utils/format-string";
 import Image from "next/image";
 import Link from "next/link";
 import { getMaterialBySlug } from "../actions";
 import { getCursos } from "@/app/cursos/actions";
 import { CardItem } from "@/components/card-item";
-import { Separator } from "@/components/ui/separator";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import BottomBar from "@/app/cursos/_components/bottom-bar";
 
