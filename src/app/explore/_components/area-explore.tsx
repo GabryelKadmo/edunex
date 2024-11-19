@@ -117,7 +117,7 @@ const AreaExplore = ({ courses, materials }: { courses: Course[], materials: Mat
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           placeholder="O que você deseja aprender?"
-          className="bg-transparent border-none focus:outline-none text-neutral-600"
+          className="bg-transparent w-full border-none focus:outline-none text-neutral-600"
           aria-label="Campo de pesquisa"
         />
         <Button
