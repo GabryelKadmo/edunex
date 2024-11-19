@@ -10,6 +10,7 @@ import DicasIcon from "@/components/icons/dicas-icon";
 import { CustomIconType } from "@/types/custom-icon";
 import Image from "next/image";
 import SearchIcon from "@/components/icons/search-icon";
+import { BoxFrases } from "@/components/box-frases";
 
 type NavItemType = {
   text: string;
@@ -55,7 +56,7 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className=" bg-white w-full h-full ">
+    <div className=" bg-white w-full h-full relative">
       <div className="py-6 border-b border-primary-50 flex justify-center">
        <Link href="/"> 
         <Image alt="Logo Edunex" src={"/logo.svg"} height={30} width={190} />
@@ -95,6 +96,9 @@ export const Sidebar = () => {
           );
         })}
       </ul>
+      <div className="absolute bottom-6 w-full">
+        <BoxFrases />
+      </div>
     </div>
   );
 };
