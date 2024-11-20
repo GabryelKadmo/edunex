@@ -77,7 +77,7 @@ export const members: Member[] = [
     id: 13,
     name: "Emanuel Helano",
     image: "/image-perfil.jpg",
-    position: "Redator"
+    position: "Conteúdo"
   },
   {
     id: 14,
@@ -125,7 +125,7 @@ export const members: Member[] = [
     id: 21,
     name: "Mell Rany",
     image: "/members/Mell-Rany.jpg",
-    position: "Conteúdo"
+    position: "Marketing"
   },
   {
     id: 22,
