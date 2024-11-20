@@ -88,7 +88,7 @@ export const members: Member[] = [
   {
     id: 15,
     name: "Fernanda Guedes",
-    image: "/image-perfil.jpg",
+    image: "/members/fernanda-guedes.jpg",
     position: "Conteúdo"
   },
   {
