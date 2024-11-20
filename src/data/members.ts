@@ -65,7 +65,7 @@ export const members: Member[] = [
     id: 11,
     name: "Wellen Souza",
     image: "https://instagram.fios7-1.fna.fbcdn.net/v/t51.2885-15/66463471_1044123002459427_468752594596495434_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi45NjJ4MTIwMi5zZHIuZjI4ODUuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=instagram.fios7-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=XMobZEmz2pgQ7kNvgF6xqF_&_nc_gid=507f6775e0234a9dafedbc102192077b&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=MjA5OTY5NTQwNzQ0OTE4NzAzMQ%3D%3D.3-ccb7-5&oh=00_AYAtU3lLRtZj_3JZYBU90VTa75tUfib0ScCf4yzzt7HZTg&oe=6742B4D7&_nc_sid=22de04",
-    position: "Gestora de Projetos"
+    position: "Marketing"
   },
   {
     id: 12,
