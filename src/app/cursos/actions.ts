@@ -21,7 +21,7 @@ export async function getCursos() {
       title: curso.titulo,
       description: curso.descricao || "",
       duration: curso.duracao || 0,
-      hasCertificate: curso.certificado === "Sim",
+      hasCertificate: curso.certificado || false,
       owner: curso.proprietario || "",
       registrationDate: curso.data || "",
       prerequisite: curso.requisitos || "",

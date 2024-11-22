@@ -14,13 +14,17 @@ import { CardItem } from "@/components/card-item";
 import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { name: string };
+}): Promise<Metadata> {
   const curso = await getCursoBySlug(params.name);
 
   if (!curso) {
     return {
-      title: 'Curso não encontrado | Edunex',
-      description: 'O curso que você está procurando não foi encontrado.',
+      title: "Curso não encontrado | Edunex",
+      description: "O curso que você está procurando não foi encontrado.",
     };
   }
 
@@ -41,11 +45,11 @@ export async function generateMetadata({ params }: { params: { name: string } })
           height: 630,
         },
       ],
-      siteName: 'Edunex',
-      type: 'article',
+      siteName: "Edunex",
+      type: "article",
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: `${curso.title} | Edunex`,
       description: curso.description,
       images: [curso.image ? curso.image : `${baseUrl}/card.png`],
@@ -53,9 +57,9 @@ export async function generateMetadata({ params }: { params: { name: string } })
   };
 }
 
-
 const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
   const curso = await getCursoBySlug(params.name);
+  console.log("curso", curso);
 
   if (!curso) return <h1>Curso não encontrado</h1>;
   const courses = await getCursos();
@@ -75,10 +79,12 @@ const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
                 fill
                 className="object-cover"
               />
-              <Badge className="py-1.5 text-sm absolute font-medium gap-2 top-5 left-5 bg-primary">
-              <CertificateIcon />
-              Com Certificado
-            </Badge>
+              {curso.hasCertificate && (
+                <Badge className="py-1.5 text-sm absolute font-medium gap-2 top-5 left-5 bg-primary">
+                  <CertificateIcon />
+                  Com Certificado
+                </Badge>
+              )}
             </div>
           </div>
           <div className="md:order-1 lg:order-2 xl:order-1">
@@ -99,8 +105,13 @@ const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
               </div>
             </div>
             <div className="text-neutral-600 text-sm mt-5">
-              <p>Criado por <span className="font-bold">{curso.owner}</span></p>
-              <p className="text-neutral-400 mt-2"><span>Visualizado em:</span> <span>{curso.registrationDate}</span></p>
+              <p>
+                Criado por <span className="font-bold">{curso.owner}</span>
+              </p>
+              <p className="text-neutral-400 mt-2">
+                <span>Visualizado em:</span>{" "}
+                <span>{curso.registrationDate}</span>
+              </p>
             </div>
             <div className="mt-6 border-t py-6">
               <p className="text-base text-neutral-700 leading-6 whitespace-pre-wrap">
@@ -134,18 +145,24 @@ const PageSingleCourse = async ({ params }: { params: { name: string } }) => {
       </div>
 
       <section className="mt-10">
-        <h3 className="px-6 lg:px-8 text-xl text-neutral-700 font-semibold">Cursos da mesma área</h3>
-      <ScrollArea className="w-full lg:whitespace-nowrap">
-            <div className="flex lg:grid px-6 lg:px-8 w-full gap-6 py-4 lg:grid-cols-3">
-                {courses
-                .filter((course) => course.category.area.id === curso.category.area.id && course.id !== curso.id)
-                .slice(0, 6)
-                .map((course) => (
-                  <CardItem key={course.id} data={course} />
-                ))}
-            </div>
-            <ScrollBar orientation="horizontal" className="px-6"/>
-          </ScrollArea>
+        <h3 className="px-6 lg:px-8 text-xl text-neutral-700 font-semibold">
+          Cursos da mesma área
+        </h3>
+        <ScrollArea className="w-full lg:whitespace-nowrap">
+          <div className="flex lg:grid px-6 lg:px-8 w-full gap-6 py-4 lg:grid-cols-3">
+            {courses
+              .filter(
+                (course) =>
+                  course.category.area.id === curso.category.area.id &&
+                  course.id !== curso.id
+              )
+              .slice(0, 6)
+              .map((course) => (
+                <CardItem key={course.id} data={course} />
+              ))}
+          </div>
+          <ScrollBar orientation="horizontal" className="px-6" />
+        </ScrollArea>
       </section>
 
       <footer className="my-16 md:my-0 md:mt-10">

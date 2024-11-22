@@ -23,7 +23,7 @@ export interface DBCurso {
   link?: string;
   imagem?: string;
   proprietario?: string;
-  certificado?: string;
+  certificado?: boolean;
   data?: string;
   categoria?: string;
   nivel?: string;
